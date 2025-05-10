@@ -1,1 +1,139 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Alice Nightingale – About</title>
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --fg: #1f2937;
+      --primary: #2563eb;
+      --accent: #4f46e5;
+      --card-bg: #ffffff;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p.intro {
+      margin-bottom: 2rem;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .links,
+    .card-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .block-link {
+      display: block;
+      background: var(--card-bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+    }
+    .block-link:hover {
+      background: #eef4ff;
+      color: var(--primary);
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .card-content {
+      color: var(--fg);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Alice Nightingale</h1>
+  <p class="intro">
+    Senior Software Engineer at Oracle, building reliable healthcare and fintech platforms. Experienced in large-scale data pipelines, Java framework design, and practical AI integrations.
+  </p>
+
+
+  <div class="section">
+    <div class="section-title">Highlights</div>
+    <div class="card-list">
+      <div class="card">
+        <div class="card-title">Neural Engineer’s Edge</div>
+        <div class="card-content">Author of an upcoming technical series on AI and system design.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Katana Framework</div>
+        <div class="card-content">Creator of a lightweight Java DI & routing library.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Oracle Health</div>
+        <div class="card-content">Lead contributor to EHR-agnostic patient administration platform.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Open Source</div>
+        <div class="card-content">Maintainer of Fintecha, a payment simulation toolkit.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Connect</div>
+    <div class="links">
+      <a class="block-link" href="mailto:alice@example.com">✉️ Email</a>
+      <a class="block-link" href="https://twitter.com/alisa_night">🐦 Twitter</a>
+      <a class="block-link" href="https://linkedin.com/in/alisanightingale">🔗 LinkedIn</a>
+      <a class="block-link" href="https://github.com/alisa-night">💻 GitHub</a>
+      <a class="block-link" href="https://huggingface.co/alisanightingale">🤗 Hugging Face</a>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">Projects</div>
+    <div class="card-list">
+      <div class="card">
+        <div class="card-title">Bubly Bomber</div>
+        <div class="card-content">Interactive data-visualization demo.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Sharklab</div>
+        <div class="card-content">AI experiments inspired by Blahaj-style models.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Fintecha</div>
+        <div class="card-content">Simulator for fintech payment flows.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
