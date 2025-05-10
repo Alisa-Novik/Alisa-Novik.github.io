@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Articles</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f0f0f0;
+      padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
+    a {
+      text-decoration: none;
+      color: #007acc;
+      background: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    a:hover {
+      background: #e0f0ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 My Articles</h1>
+  <ul id="article-list"></ul>
+
+  <script>
+    fetch('./')
+      .then(res => res.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const links = Array.from(doc.querySelectorAll('a'))
+          .filter(link => link.getAttribute('href').endsWith('.md'));
+        const ul = document.getElementById('article-list');
+        links.forEach(link => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${link.getAttribute('href')}">${link.textContent}</a>`;
+          ul.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
