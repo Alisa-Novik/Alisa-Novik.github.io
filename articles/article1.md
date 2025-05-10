@@ -12,7 +12,7 @@ This article is the summary of those months of work is based on hundreds of arti
 - test
 - asdasd
 
-Maintain a running list of people related to your EB-1A case
+# Maintain a running list of people related to your EB-1A case
 If you don't have such list, you should create one today. I have more than 30 people involved in my EB-1A case in one way or another.
 
 I use Telegram which provides feature to group related private or group chats and is widely used in Eastern Europe, so I had this out of the box. You can use something as simple as Google Sheets.

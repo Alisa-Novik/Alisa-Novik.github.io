@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Articles</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
-      background-color: #f0f0f0;
+      background: #f9fafb;
+      color: #333;
       padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
     h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
     li {
-      margin: 0.5rem 0;
+      margin: 1rem 0;
     }
     a {
-      text-decoration: none;
-      color: #007acc;
+      display: block;
       background: white;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      display: inline-block;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 1.5rem;
+      border-left: 5px solid #4f46e5;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #1e293b;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
     }
     a:hover {
-      background: #e0f0ff;
+      background: #eef2ff;
+      transform: scale(1.02);
     }
   </style>
 </head>
 <body>
-  <h1>📝 My Articles</h1>
-  <ul id="article-list"></ul>
-
-  <script>
-    fetch('./')
-      .then(res => res.text())
-      .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const links = Array.from(doc.querySelectorAll('a'))
-          .filter(link => link.getAttribute('href').endsWith('.md'));
-        const ul = document.getElementById('article-list');
-        links.forEach(link => {
-          const li = document.createElement('li');
-          li.innerHTML = `<a href="${link.getAttribute('href')}">${link.textContent}</a>`;
-          ul.appendChild(li);
-        });
-      });
-  </script>
+  <h1>📚 My Articles</h1>
+  <ul>
+    <li><a href="first-article.md">📝 First Article</a></li>
+    <li><a href="second-article.md">✨ Second Article</a></li>
+    <li><a href="deep-dive-into-async.md">🔍 Deep Dive into Async</a></li>
+    <li><a href="why-i-love-java.md">☕ Why I Love Java</a></li>
+  </ul>
 </body>
 </html>
